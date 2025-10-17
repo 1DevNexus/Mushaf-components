@@ -1,0 +1,11 @@
+{
+  "urls": {
+    "github": "https://github.com/1DevNexus/Repo",
+    "playStore": "https://play.google.com/store/apps/details?id=com.tiutech.quran",
+    "website": "https://1devnexus.github.io/quran",
+    "privacyPolicy": "https://1devnexus.github.io/quran/privacy-policy",
+    "termsOfService": "https://1devnexus.github.io/quran/terms-of-service",
+    "feedback": "https://1devnexus.github.io/quran/feedback",
+    "donate": "https://1devnexus.github.io/quran/donate"
+  }
+}

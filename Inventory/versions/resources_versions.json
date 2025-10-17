@@ -1,0 +1,50 @@
+{
+  "translations": {
+    "ar": {
+      "version": 17,
+      "lastUpdated": "2025-07-09"
+    },
+    "en": {
+      "version": 17,
+      "lastUpdated": "2025-07-09"
+    }
+  },
+  "quran_scripts": {
+    "uthmani": {
+      "version": 17,
+      "lastUpdated": "2025-07-09"
+    },
+    "indopak": {
+      "version": 17,
+      "lastUpdated": "2025-07-09"
+    }
+  },
+  "fonts": {
+    "arabic": {
+      "version": 17,
+      "lastUpdated": "2025-07-09"
+    }
+  },
+  "recitations": {
+    "main": {
+      "version": 17,
+      "lastUpdated": "2025-07-09"
+    },
+    "translations": {
+      "version": 17,
+      "lastUpdated": "2025-07-09"
+    }
+  },
+  "tafsirs": {
+    "main": {
+      "version": 17,
+      "lastUpdated": "2025-07-09"
+    }
+  },
+  "other": {
+    "urls": {
+      "version": 17,
+      "lastUpdated": "2025-07-09"
+    }
+  }
+}
