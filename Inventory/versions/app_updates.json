@@ -1,37 +1,37 @@
 [
   {
-    "version": 17,
-    "versionName": "2.1.7",
+    "version": 117,
+    "versionName": "3.0.0",
     "updatePriority": 0,
     "title": "الإصدار الحالي",
-    "description": "تم إصلاح مشكلة عرض النص في تبويبات بطاقة الأنبياء وتحسينات في الأداء والاستقرار"
+    "description": "نظام ألوان احترافي جديد وتحسينات شاملة في الواجهة"
   },
   {
-    "version": 16,
-    "versionName": "2.1.6",
+    "version": 116,
+    "versionName": "2.9.9",
     "updatePriority": 4,
-    "title": "تحديث جديد متاح",
-    "description": "تم إضافة مزايا جديدة وتحسينات كبيرة في الأداء. يُنصح بتحديث التطبيق الآن."
+    "title": "تحديث هام متاح",
+    "description": "إضافة نظام ألوان جديد وتحسينات كبيرة في الأداء والواجهة. يُنصح بتحديث التطبيق الآن."
   },
   {
-    "version": 14,
-    "versionName": "2.1.5",
+    "version": 115,
+    "versionName": "2.9.8",
     "updatePriority": 3,
     "title": "تحديث جديد متاح",
-    "description": "تم إضافة مزايا جديدة وتحسينات كبيرة في الأداء. يُنصح بتحديث التطبيق الآن."
+    "description": "تحسينات في نظام الألوان وإصلاح بعض المشاكل في الواجهة"
   },
   {
-    "version": 13,
-    "versionName": "2.1.3",
-    "updatePriority": 0,
-    "title": "الإصدار الحالي",
-    "description": "هذا هو الإصدار الحالي من تطبيق القرآن الكريم"
+    "version": 114,
+    "versionName": "2.9.7",
+    "updatePriority": 3,
+    "title": "تحديث متوفر",
+    "description": "إصلاح مشاكل في عرض النصوص وتحسينات في الأداء"
   },
   {
-    "version": 10,
-    "versionName": "2.1.0",
-    "updatePriority": 4,
-    "title": "تحديث هام",
-    "description": "يرجى تحديث التطبيق للحصول على أحدث الميزات وإصلاحات الأخطاء وتحسينات الأداء"
+    "version": 113,
+    "versionName": "2.9.6",
+    "updatePriority": 2,
+    "title": "تحديث ثانوي",
+    "description": "تحسينات صغيرة في الواجهة وإصلاح بعض الأخطاء"
   }
 ]

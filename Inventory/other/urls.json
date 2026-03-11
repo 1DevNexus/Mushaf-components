@@ -1,11 +1,23 @@
 {
   "urls": {
-    "github": "https://github.com/1DevNexus/Repo",
-    "playStore": "https://play.google.com/store/apps/details?id=com.tiutech.quran",
-    "website": "https://1devnexus.github.io/quran",
-    "privacyPolicy": "https://1devnexus.github.io/quran/privacy-policy",
-    "termsOfService": "https://1devnexus.github.io/quran/terms-of-service",
-    "feedback": "https://1devnexus.github.io/quran/feedback",
-    "donate": "https://1devnexus.github.io/quran/donate"
+    "github": "https://github.com/1DevNexus/Mushaf-components",
+    "releases": "https://github.com/1DevNexus/Mushaf-components/releases",
+    "issues": "https://github.com/1DevNexus/Mushaf-components/issues",
+    "api_base": "https://raw.githubusercontent.com/1DevNexus/Mushaf-components/main/Inventory/",
+    "cdn_base": "https://cdn.jsdelivr.net/gh/1DevNexus/Mushaf-components@latest/Inventory/",
+    "playStore": "https://play.google.com/store/apps/details?id=com.isysway.mushaf",
+    "website": "https://mushaf.isysway.com",
+    "privacyPolicy": "https://mushaf.isysway.com/privacy-policy",
+    "termsOfService": "https://mushaf.isysway.com/terms-of-service",
+    "feedback": "https://mushaf.isysway.com/feedback",
+    "donate": "https://mushaf.isysway.com/donate"
+  },
+  "app": {
+    "package_name": "com.isysway.mushaf",
+    "source": "https://github.com/1DevNexus/Mushaf-project"
+  },
+  "support": {
+    "email": "support@mushaf.isysway.com",
+    "telegram": "https://t.me/mushaf_channel"
   }
 }
