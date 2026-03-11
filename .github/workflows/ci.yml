@@ -1,0 +1,146 @@
+name: 'Mushaf Components CI'
+
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+      - "README.md"
+      - "LICENSE"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+      - "README.md"
+      - "LICENSE"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Validate JSON files
+      run: |
+        echo "Validating JSON files..."
+        
+        # Validate app_updates.json
+        if ! jq empty Inventory/versions/app_updates.json; then
+          echo "❌ app_updates.json is invalid"
+          exit 1
+        fi
+        
+        # Validate resources_versions.json
+        if ! jq empty Inventory/versions/resources_versions.json; then
+          echo "❌ resources_versions.json is invalid"
+          exit 1
+        fi
+        
+        # Validate urls.json
+        if ! jq empty Inventory/other/urls.json; then
+          echo "❌ urls.json is invalid"
+          exit 1
+        fi
+        
+        echo "✅ All JSON files are valid"
+        
+    - name: Check version consistency
+      run: |
+        echo "Checking version consistency..."
+        
+        # Get latest version from app_updates.json
+        LATEST_VERSION=$(jq -r '.[0].version' Inventory/versions/app_updates.json)
+        
+        # Check if version is reasonable
+        if [ "$LATEST_VERSION" -lt 100 ]; then
+          echo "❌ Version $LATEST_VERSION seems too low"
+          exit 1
+        fi
+        
+        echo "✅ Latest version: $LATEST_VERSION"
+        
+    - name: Update CDN cache
+      run: |
+        echo "Triggering jsDelivr cache update..."
+        curl -X POST "https://purge.jsdelivr.net/gh/1DevNexus/Mushaf-components"
+        echo "✅ CDN cache update triggered"
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Deploy to GitHub Pages
+      run: |
+        echo "Deploying to GitHub Pages..."
+        
+        # Create docs directory
+        mkdir -p docs
+        
+        # Copy inventory files
+        cp -r Inventory docs/
+        
+        # Create index file
+        cat > docs/index.html << EOF
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mushaf Components API</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .endpoint { background: #f5f5f5; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .method { color: #007bff; font-weight: bold; }
+        .url { color: #28a745; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Mushaf Components API</h1>
+    <p>API endpoints for Mushaf application updates and resources.</p>
+    
+    <h2>Available Endpoints</h2>
+    <div class="endpoint">
+        <span class="method">GET</span> 
+        <span class="url">/versions/app_updates.json</span>
+        <p>Get application update information</p>
+    </div>
+    
+    <div class="endpoint">
+        <span class="method">GET</span> 
+        <span class="url">/versions/resources_versions.json</span>
+        <p>Get resource versions information</p>
+    </div>
+    
+    <div class="endpoint">
+        <span class="method">GET</span> 
+        <span class="url">/other/urls.json</span>
+        <p>Get application URLs and configuration</p>
+    </div>
+    
+    <h2>CDN Access</h2>
+    <p>All files are also available via jsDelivr CDN:</p>
+    <div class="endpoint">
+        <span class="url">https://cdn.jsdelivr.net/gh/1DevNexus/Mushaf-components@latest/Inventory/</span>
+    </div>
+</body>
+</html>
+        EOF
+        
+        echo "✅ Documentation generated"
+        
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
+        publish_branch: gh-pages

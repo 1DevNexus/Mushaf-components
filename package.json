@@ -1,0 +1,22 @@
+{
+  "name": "mushaf-components",
+  "version": "1.0.0",
+  "description": "Mushaf application update system and components",
+  "main": "MushafUpdateManager.kt",
+  "scripts": {
+    "validate": "jq empty Inventory/versions/app_updates.json && jq empty Inventory/versions/resources_versions.json && jq empty Inventory/other/urls.json",
+    "deploy": "git add . && git commit -m 'Update components' && git push origin main"
+  },
+  "keywords": ["mushaf", "quran", "update-system", "android", "kotlin"],
+  "author": "1DevNexus",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1DevNexus/Mushaf-components.git"
+  },
+  "dependencies": {
+    "retrofit2": "^2.9.0",
+    "kotlinx-serialization": "^1.5.0",
+    "okhttp3": "^4.10.0"
+  }
+}
