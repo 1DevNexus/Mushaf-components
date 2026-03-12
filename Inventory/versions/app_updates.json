@@ -1,37 +1,23 @@
 [
   {
+    "version": 118,
+    "versionName": "3.0.1",
+    "updatePriority": 0,
+    "title": "الإصدار الحالي v3.0.1",
+    "description": "• نظام ألوان احترافي جديد (Deep Teal & Desert Sand)\n• تحسين شكل وتظليل الآيات في المصحف\n• أيقونة بحث جديدة أكثر وضوحاً\n• تثبيت شريط التنقل السفلي عند التمرير\n• تحسينات شاملة في واجهة المستخدم"
+  },
+  {
     "version": 117,
     "versionName": "3.0.0",
-    "updatePriority": 0,
-    "title": "الإصدار الحالي",
-    "description": "نظام ألوان احترافي جديد وتحسينات شاملة في الواجهة"
+    "updatePriority": 4,
+    "title": "تحديث هام v3.0.0",
+    "description": "تحديث شامل لنظام الألوان والواجهة"
   },
   {
     "version": 116,
     "versionName": "2.9.9",
     "updatePriority": 4,
-    "title": "تحديث هام متاح",
-    "description": "إضافة نظام ألوان جديد وتحسينات كبيرة في الأداء والواجهة. يُنصح بتحديث التطبيق الآن."
-  },
-  {
-    "version": 115,
-    "versionName": "2.9.8",
-    "updatePriority": 3,
-    "title": "تحديث جديد متاح",
-    "description": "تحسينات في نظام الألوان وإصلاح بعض المشاكل في الواجهة"
-  },
-  {
-    "version": 114,
-    "versionName": "2.9.7",
-    "updatePriority": 3,
-    "title": "تحديث متوفر",
-    "description": "إصلاح مشاكل في عرض النصوص وتحسينات في الأداء"
-  },
-  {
-    "version": 113,
-    "versionName": "2.9.6",
-    "updatePriority": 2,
-    "title": "تحديث ثانوي",
-    "description": "تحسينات صغيرة في الواجهة وإصلاح بعض الأخطاء"
+    "title": "تحديث v2.9.9",
+    "description": "تحسينات في الأداء والواجهة"
   }
 ]
